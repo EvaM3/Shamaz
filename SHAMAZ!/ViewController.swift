@@ -71,7 +71,7 @@ class ViewController: UIViewController {
     
     func makeRandomQuestion(fromList: [String]) -> String {
         let randomNumber = Int.random(in:1...maxTimeFrameNumber)
-        var timeFrame = timeFrames[0]
+        var timeFrame = makeRandomElement(fromList: timeFrames)
         if randomNumber > 1 {
             timeFrame = timeFrame + "s"
         }
